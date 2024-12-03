@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beiota</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Vinculamos el archivo CSS -->
+</head>
+<body>
+  <!-- Fondo de pantalla -->
+  <div class="background"></div>
+
+  <!-- Reproductor de audio -->
+  <div class="audio-player">
+    <label for="audio"></label>
+    <audio id="audio" controls loop>
+      <source src="322/music/220.mp3" type="audio/mp3"> <!-- Ruta relativa -->
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <button id="backward">⏪ Retroceder 10s</button>
+    <button id="forward">⏩ Adelantar 10s</button>
+  </div>
+
+  <!-- Contenedor de imágenes -->
+  <div id="image-container"></div>
+
+  <!-- Vinculamos el archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

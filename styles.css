@@ -1,0 +1,85 @@
+/* Fondo de pantalla */
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('322/img/951985.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Reproductor de audio */
+.audio-player {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100; /* Siempre encima de las imágenes */
+}
+
+.audio-player audio {
+  width: 300px;
+}
+
+.audio-player button {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.audio-player button:hover {
+  background-color: #45a049; /* Verde más oscuro */
+}
+
+/* Contenedor de imágenes */
+#image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Altura completa de la ventana */
+  overflow: hidden; /* Oculta imágenes fuera del contenedor */
+  z-index: 1;
+}
+
+/* Imágenes */
+.image {
+  position: absolute;
+  width: 220px; /* Tamaño mayor para imágenes */
+  height: auto; /* Mantener proporción original */
+  cursor: pointer;
+  border: none; /* Sin bordes */
+  margin: 0;
+  padding: 0;
+  box-shadow: none; /* Sin sombras */
+  transition: transform 0.3s ease; /* Suaviza movimientos */
+}
+
+/* Opcional: Efecto de hover sobre las imágenes */
+.image:hover {
+  transform: scale(1.1); /* Aumenta ligeramente al pasar el mouse */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Aseguramos la visibilidad en todos los tamaños */
+@media screen and (max-width: 768px) {
+  .image {
+    width: 150px; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+}
