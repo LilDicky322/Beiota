@@ -1,2 +1,0 @@
-# Beiota
-Estaba aburrido
